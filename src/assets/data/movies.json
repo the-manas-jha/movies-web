@@ -7,7 +7,7 @@
       "rating": "8.8",
       "genre": ["Action", "Sci-Fi", "Thriller"],
       "duration": "148 min",
-      "poster": "https://www.imdb.com/title/tt1375666/mediaviewer/rm3426651392/?ref_=ext_shr_lnk",
+      "poster": "inception1.jpg",
       "thumbnail": "inception.jpg"
     },
     {
@@ -17,7 +17,7 @@
       "rating": "9.3",
       "genre": ["Drama"],
       "duration": "142 min",
-      "poster": "https://example.com/shawshank/poster.jpg",
+      "poster": "shawshank1.jpg",
       "thumbnail": "Shawshank.jpg"
     },
     {
@@ -27,7 +27,7 @@
       "rating": "9.2",
       "genre": ["Crime", "Drama"],
       "duration": "175 min",
-      "poster": "https://example.com/godfather/poster.jpg",
+      "poster": "godfather1.jpg",
       "thumbnail": "godfather.jpg"
     },
     {
@@ -37,7 +37,7 @@
       "rating": "9.0",
       "genre": ["Action", "Crime", "Drama"],
       "duration": "152 min",
-      "poster": "https://example.com/darkknight/poster.jpg",
+      "poster": "darkknight.jpg",
       "thumbnail": "batman.jpg"
     },
     {
@@ -47,7 +47,7 @@
       "rating": "8.9",
       "genre": ["Crime", "Drama"],
       "duration": "154 min",
-      "poster": "https://example.com/pulpfiction/poster.jpg",
+      "poster": "pulp1.jpg",
       "thumbnail": "pulp.jpg"
     },
     {
@@ -57,7 +57,7 @@
       "rating": "8.9",
       "genre": ["Biography", "Drama", "History"],
       "duration": "195 min",
-      "poster": "https://example.com/schindlerslist/poster.jpg",
+      "poster": "list1.jpg",
       "thumbnail": "schindler.jpg"
     },
     {
@@ -67,7 +67,7 @@
       "rating": "8.9",
       "genre": ["Action", "Adventure", "Drama"],
       "duration": "201 min",
-      "poster": "https://example.com/lotr_returnoftheking/poster.jpg",
+      "poster": "lord_return1.jpg",
       "thumbnail": "lord_return.jpg"
     },
     {
@@ -77,7 +77,7 @@
       "rating": "8.8",
       "genre": ["Drama"],
       "duration": "139 min",
-      "poster": "https://example.com/fightclub/poster.jpg",
+      "poster": "fightclub1.jpeg",
       "thumbnail": "fightclub.jpg"
     },
     {
@@ -87,7 +87,7 @@
       "rating": "8.8",
       "genre": ["Drama", "Romance"],
       "duration": "142 min",
-      "poster": "https://example.com/forrestgump/poster.jpg",
+      "poster": "forrest1.jpg",
       "thumbnail": "Forrest.jpg"
     },
     {
@@ -97,7 +97,7 @@
       "rating": "8.7",
       "genre": ["Action", "Sci-Fi"],
       "duration": "136 min",
-      "poster": "https://example.com/thematrix/poster.jpg",
+      "poster": "matrix1.jpg",
       "thumbnail": "matrix.jpg"
     },
     {
@@ -107,7 +107,7 @@
       "rating": "8.7",
       "genre": ["Biography", "Crime", "Drama"],
       "duration": "146 min",
-      "poster": "https://example.com/goodfellas/poster.jpg",
+      "poster": "goodfellas1.jpg",
       "thumbnail": "goodfellas.jpg"
     },
     {
@@ -117,7 +117,7 @@
       "rating": "8.8",
       "genre": ["Action", "Adventure", "Drama"],
       "duration": "178 min",
-      "poster": "https://example.com/lotr_fellowship/poster.jpg",
+      "poster": "lord_fellowship1.jpg",
       "thumbnail": "lord_fellowship.jpg"
     },
     {
@@ -127,7 +127,7 @@
       "rating": "8.7",
       "genre": ["Action", "Adventure", "Fantasy"],
       "duration": "124 min",
-      "poster": "https://example.com/starwars_empire/poster.jpg",
+      "poster": "starwars.jpg",
       "thumbnail": "star_wars_v.jpg"
     },
     {
@@ -137,7 +137,7 @@
       "rating": "8.7",
       "genre": ["Action", "Adventure", "Drama"],
       "duration": "179 min",
-      "poster": "https://example.com/lotr_twotowers/poster.jpg",
+      "poster": "lord_two1.jpg",
       "thumbnail": "lord_two.jpg"
       },
       {
@@ -147,7 +147,7 @@
       "rating": "8.6",
       "genre": ["Crime", "Drama", "Thriller"],
       "duration": "118 min",
-      "poster": "https://example.com/silenceofthelambs/poster.jpg",
+      "poster": "silence1.jpg",
       "thumbnail": "silence.jpg"
       },
       {
@@ -157,7 +157,7 @@
       "rating": "8.6",
       "genre": ["Drama", "War"],
       "duration": "169 min",
-      "poster": "https://example.com/savingprivateryan/poster.jpg",
+      "poster": "saving1.jpg",
       "thumbnail": "saving.jpg"
       },
       {
@@ -167,7 +167,7 @@
       "rating": "8.6",
       "genre": ["Adventure", "Drama", "Sci-Fi"],
       "duration": "169 min",
-      "poster": "https://example.com/interstellar/poster.jpg",
+      "poster": "interstellar1.jpg",
       "thumbnail": "interstellar.jpg"
       },
       {
@@ -177,7 +177,7 @@
       "rating": "8.6",
       "genre": ["Comedy", "Drama", "Thriller"],
       "duration": "132 min",
-      "poster": "https://example.com/parasite/poster.jpg",
+      "poster": "parasite1.jpg",
       "thumbnail": "parasite.png"
       },
       {
@@ -187,7 +187,7 @@
       "rating": "8.6",
       "genre": ["Crime", "Drama", "Fantasy"],
       "duration": "189 min",
-      "poster": "https://example.com/greenmile/poster.jpg",
+      "poster": "green1.jpg",
       "thumbnail": "green.jpg"
       },
       {
@@ -197,7 +197,7 @@
       "rating": "8.5",
       "genre": ["Action", "Adventure", "Drama"],
       "duration": "155 min",
-      "poster": "https://example.com/gladiator/poster.jpg",
+      "poster": "gladiator1.jpg",
       "thumbnail": "gladiator.png"
       },
       {
@@ -207,7 +207,7 @@
       "rating": "8.5",
       "genre": ["Drama", "Mystery", "Sci-Fi"],
       "duration": "130 min",
-      "poster": "https://example.com/theprestige/poster.jpg",
+      "poster": "prestige1.jpg",
       "thumbnail": "prestige.jpg"
       },
       {
@@ -217,7 +217,7 @@
       "rating": "8.5",
       "genre": ["Drama", "Music"],
       "duration": "106 min",
-      "poster": "https://example.com/whiplash/poster.jpg",
+      "poster": "whiplash1.jpg",
       "thumbnail": "whiplash.jpg"
       },
       {
@@ -227,7 +227,7 @@
       "rating": "8.5",
       "genre": ["Biography", "Comedy", "Drama"],
       "duration": "112 min",
-      "poster": "https://example.com/intouchables/poster.jpg",
+      "poster": "intouchables1.jpeg",
       "thumbnail": "intouchables.jpeg"
       },
       {
@@ -237,7 +237,7 @@
       "rating": "8.5",
       "genre": ["Crime", "Drama", "Thriller"],
       "duration": "151 min",
-      "poster": "https://example.com/thedeparted/poster.jpg",
+      "poster": "departed1.jpg",
       "thumbnail": "departed.jpg"
       },
       {
@@ -247,7 +247,7 @@
       "rating": "8.5",
       "genre": ["Animation", "Adventure", "Drama"],
       "duration": "88 min",
-      "poster": "https://example.com/lionking/poster.jpg",
+      "poster": "lion1.jpg",
       "thumbnail": "lion.jpeg"
       },
       {
@@ -257,7 +257,7 @@
       "rating": "8.4",
       "genre": ["Crime", "Drama", "Thriller"],
       "duration": "122 min",
-      "poster": "https://example.com/joker/poster.jpg",
+      "poster": "joker1.jpg",
       "thumbnail": "joker.png"
       },
       {
@@ -267,7 +267,7 @@
       "rating": "8.3",
       "genre": ["Adventure", "Drama", "War"],
       "duration": "153 min",
-      "poster": "https://example.com/inglouriousbasterds/poster.jpg",
+      "poster": "inglorious1.jpg",
       "thumbnail": "inglorious.jpg"
       },
       {
@@ -277,7 +277,7 @@
       "rating": "8.4",
       "genre": ["Animation", "Adventure", "Comedy"],
       "duration": "105 min",
-      "poster": "https://example.com/coco/poster.jpg",
+      "poster": "coco1.webp",
       "thumbnail": "coco.jpeg"
       },
       {
@@ -287,7 +287,7 @@
       "rating": "8.4",
       "genre": ["Action", "Adventure", "Sci-Fi"],
       "duration": "149 min",
-      "poster": "https://example.com/infinitywar/poster.jpg",
+      "poster": "avengers_infinity1.jpg",
       "thumbnail": "avengers.jpeg"
       },
       {
@@ -297,7 +297,7 @@
       "rating": "8.4",
       "genre": ["Action", "Adventure", "Drama"],
       "duration": "181 min",
-      "poster": "https://example.com/endgame/poster.jpg",
+      "poster": "avengers_endgame1.jpg",
       "thumbnail": "avengers_endgame.jpg"
       }
       ]

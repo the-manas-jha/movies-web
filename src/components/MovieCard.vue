@@ -1,6 +1,6 @@
 <template>
   <div class="movie-card">
-    <img :src="movie.thumbnail" alt="Movie thumbnail" class="movie-poster" />
+    <img :src="movie.poster" alt="Movie thumbnail" class="movie-poster" />
     <div class="movie-info">
       <h2 class="movie-title">{{ movie.title }}</h2>
       <p class="movie-release-date">{{ movie.description}}</p>

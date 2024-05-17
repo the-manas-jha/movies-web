@@ -18,7 +18,8 @@ export default new Vuex.Store({
     fetchMovies({ commit }) {
       const movies = moviesData.movies.map(movie => ({
         ...movie,
-        thumbnail: require(`../assets/thumbnail/${movie.thumbnail}`)
+        thumbnail: require(`../assets/thumbnail/${movie.thumbnail}`),
+        poster: require(`../assets/poster/${movie.poster}`)
       }));
       commit('setMovies', movies);
     }
