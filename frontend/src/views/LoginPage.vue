@@ -1,24 +1,44 @@
 <template>
   <v-container fluid fill-height>
-    <v-row align="center" justify="center">
+    <v-row align-center justify-center>
       <v-col cols="12">
-        <v-card class="pa-15 glossy-effect" elevation="5" width="400" height="auto" >
+        <v-card class="pa-15 glossy-effect" elevation="5" width="400" height="100vh">
+          <v-form v-model="isFormValid">
           <v-row no-gutters>
             <v-col cols="12">
-              <v-img src="~@/assets/streamit.png" alt="Banner" max-height="48" contain></v-img>
+              <v-img src="@/assets/streamit.png" alt="Banner" max-height="48" contain></v-img>
             </v-col>
           </v-row>
+          
           <v-row class="mt-8">
             <v-col cols="12">
               <label for="usernameOrEmail" class="font-weight-bold">Username or Email Address</label>
-              <v-text-field v-model="usernameOrEmail" id="usernameOrEmail" outlined dense class="mt-3 custom-input"></v-text-field>
+              <v-text-field 
+                v-model="usernameOrEmail" 
+                id="usernameOrEmail" 
+                outlined 
+                dense 
+                class="mt-3 custom-input"
+                :rules="[$rules.requiredRules, $rules.usernameRules]"
+                autocomplete="username"
+              ></v-text-field>
             </v-col>
           </v-row>
           <v-row class="mt-1">
             <v-col cols="12">
               <label for="password" class="font-weight-bold">Password</label>
-              <v-text-field v-model="password" id="password" outlined dense hide-details class="mt-3 custom-input" :type="showPassword ? 'text' : 'password'" :append-icon="showPassword ? 'mdi-eye-off' : 'mdi-eye'" @click:append="showPassword = !showPassword" >
-              </v-text-field>
+              <v-text-field 
+                v-model="password" 
+                id="password" 
+                outlined 
+                dense 
+                class="mt-3 custom-input" 
+                :type="showPassword ? 'text' : 'password'" 
+                :append-icon="showPassword ? 'mdi-eye-off' : 'mdi-eye'" 
+                @click:append="showPassword = !showPassword" 
+                :rules="[$rules.requiredRules, $rules.passwordRules]"
+                autocomplete="current-password"
+              ></v-text-field>
               <a href="/forgot" class="forgot-password-link">Forgot Password?</a>
             </v-col>
           </v-row>
@@ -29,9 +49,18 @@
           </v-row>
           <v-row class="mt-1">
             <v-col cols="12">
-              <v-btn color="primary" class="login-button" block>Log In</v-btn>
+              <v-btn 
+                color="primary" 
+                class="login-button" 
+                block 
+                :disabled="!isFormValid"
+                @click="login"
+              >
+                Log In
+              </v-btn>
             </v-col>
           </v-row>
+         
           <v-row class="mt-5">
             <v-col cols="12" class="d-flex justify-center">
               New to StreamIt? <a href="/register" class="sign-up-link">Sign Up</a>
@@ -49,6 +78,7 @@
               <a href="#" class="social-icon"><v-icon>mdi-aws</v-icon></a>
             </v-col>
           </v-row>
+          </v-form>
         </v-card>
       </v-col>
     </v-row>
@@ -59,17 +89,24 @@
 export default {
   name: 'LoginPage',
   data() {
-    return {
-      usernameOrEmail: '',
-      password: '',
-      showPassword: false,
-    };
-  },
+
+return {
+  usernameOrEmail: '',
+  password: '',
+  showPassword: false,
+  isFormValid: false,
+};
+
+},
+
+methods: {
+login() {
+    }
+  }
 };
 </script>
 
 <style scoped>
-
 .no-underline {
   text-decoration: none;
 }
@@ -82,14 +119,13 @@ export default {
 }
 
 .custom-input input {
-  border-color: primary ; 
-  border-radius: 0 ; 
+  border-color: primary;
+  border-radius: 0;
 }
 
 .custom-input .v-icon.mdi.mdi-eye, .custom-input .v-icon.mdi.mdi-eye-off {
   color: primary;
 }
-
 
 .divider {
   flex-grow: 1;
@@ -105,7 +141,7 @@ export default {
   display: flex;
   justify-content: center;
   align-items: center;
-  height: 100vh; 
+  height: 100vh;
 }
 
 .forgot-password-link {

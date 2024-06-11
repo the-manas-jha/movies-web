@@ -1,8 +1,11 @@
+
 <template>
   <v-container fluid fill-height>
-    <v-row align="center" justify="center">
+    <v-row align="center" justify="center" >
       <v-col cols="12" sm="8" md="6" lg="4" xl="3" class="d-flex justify-center">
-        <v-card class="glossy-effect pr-7 pl-7 pb-7 pt-4 flex-grow-1" elevation="5">
+        <v-card class="glossy-effect pr-7 pl-7 pb-7 pt-4 flex-grow-1" elevation="5" height="110vh">
+          <v-form 
+          v-model="isFormValid">
           <v-row no-gutters>
             <v-col cols="12"  class="mt-1 d-flex justify-center">
               <v-card-title class="align-self-center" style="font-size: 25px;">Create Your Account</v-card-title>
@@ -11,23 +14,31 @@
           <v-row class="mt-6">
             <v-col cols="12" sm="6">
               <label for="firstName" class="font-weight-bold">First Name</label>
-              <v-text-field v-model="firstName" id="firstName" outlined dense height="52" class="custom-input mt-2"></v-text-field>
+              <v-text-field v-model="firstName" id="firstName" outlined dense height="52" class="custom-input mt-2"
+              :rules="[$rules.requiredRules, $rules.characterRules]"
+              ></v-text-field>
             </v-col>
             <v-col cols="12" sm="6">
               <label for="lastName" class="font-weight-bold">Last Name</label>
-              <v-text-field  v-model="lastName" id="lastName" outlined dense height="52" class="custom-input mt-2"></v-text-field>
+              <v-text-field  v-model="lastName" id="lastName" outlined dense height="52" class="custom-input mt-2"
+              :rules="[$rules.requiredRules, $rules.characterRules]"
+              ></v-text-field>
             </v-col>
           </v-row>
           <v-row class="mt-1">
             <v-col cols="12">
               <label for="email" class="font-weight-bold">Email*</label>
-              <v-text-field v-model="email" id="email" outlined dense height="52" class="custom-input mt-2"></v-text-field>
+              <v-text-field v-model="email" id="email" outlined dense height="52" class="custom-input mt-2"
+              :rules="[$rules.requiredRules, $rules.emailRules]"
+              ></v-text-field>
             </v-col>
           </v-row>
           <v-row class="mt-1">
             <v-col cols="12" sm="6">
               <label for="username" class="font-weight-bold">Username*</label>
-              <v-text-field v-model="username" id="username" outlined dense height="52" class="custom-input mt-2"></v-text-field>
+              <v-text-field v-model="username" id="username" outlined dense height="52" class="custom-input mt-2" autocomplete="username"
+              :rules="[$rules.requiredRules, $rules.usernameRules]"
+              ></v-text-field>
             </v-col>
             <v-col cols="12" sm="6">
               <label for="password" class="font-weight-bold">Password*</label>
@@ -36,35 +47,38 @@
               id="password"
               outlined
               dense
-              hide-details
               height="52"
               class="mt-2 custom-input"
               :type="showPassword ? 'text' : 'password'"
               :append-icon="showPassword ? 'mdi-eye-off' : 'mdi-eye'"
               @click:append="showPassword = !showPassword"
               append-icon-color="primary"
+              :rules="[$rules.requiredRules, $rules.passwordRules]"
               align-center
+              autocomplete="current-password"
               ></v-text-field>
               
             </v-col>
           </v-row>
           <v-row class="mt-5">
             <v-col cols="12">
-              <v-checkbox :label="`<span class='font-weight-bold'>Remember Me</span>`" class="mt-0 pt-0 mb-0">
+              <v-checkbox v-model="checkboxChecked" class="mt-0 pt-0 mb-0" :rules="[$rules.requiredRules]">
                 <template v-slot:label>
-                  <span class="font-weight-bold">I've read and accepted the <a href="/login" class="red--text no-underline ml-1">Terms & conditions*</a></span>
+                  <span class="font-weight-bold">I've read and accepted the</span>
+                  <a href="/login" class=" no-underline ml-1 link-color">Terms & conditions*</a>
                 </template>
               </v-checkbox>
+              
             </v-col>
           </v-row>
           <v-row class="mt-1 align-center justify-center">
             <v-col cols="6">
-              <v-btn color="primary" class="pt-6 pb-6" block>Sign Up</v-btn>
+              <v-btn color="primary" class="pt-6 pb-6" block :disabled="!isFormValid">Sign Up</v-btn>
             </v-col>
           </v-row>
           <v-row class="mt-5">
             <v-col cols="12" class="d-flex justify-center">
-              Already have an account? <a href="/login" class="red--text no-underline ml-2"> Sign In</a>
+              Already have an account? <a href="/login" class=" no-underline ml-2 link-color"> Sign In</a>
             </v-col>
           </v-row>
           <v-row class="mt-5">
@@ -79,6 +93,7 @@
               <a href="#"><v-icon>mdi-aws</v-icon></a>
             </v-col>
           </v-row>
+          </v-form>
         </v-card>
       </v-col>
     </v-row>
@@ -96,8 +111,11 @@ export default {
       username: '',
       password: '',
       showPassword: false,
+      checkboxChecked: false,
+      isFormValid: false,
     };
   },
+  
 };
 </script>
 
@@ -114,7 +132,9 @@ export default {
   width: 100%;
   min-width: 650px; 
   max-width: 100%;
-  margin: 0 auto;
+  margin:
+
+ 0 auto;
 }
 
 .custom-input input {
@@ -155,6 +175,10 @@ export default {
   text-overflow: ellipsis; 
 }
 
+.link-color {
+  color: primary;
+}
+
 
 @media (max-width: 600px) {
   .v-card-title {
@@ -169,3 +193,5 @@ export default {
   }
 }
 </style>
+
+

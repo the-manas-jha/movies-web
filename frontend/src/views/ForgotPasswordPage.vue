@@ -3,6 +3,8 @@
     <v-row align="center" justify="center" class="fill-height">
       <v-col cols="auto">
         <v-card class="glossy-effect pa-6" width="400">
+          <v-form 
+          v-model="isFormValid">
           <v-container>
             <v-row>
               <v-col>
@@ -12,7 +14,17 @@
             <v-row class="mt-2">
               <v-col cols="12">
                 <label for="usernameOrEmail" class="font-weight-bold">Username or Email Address</label>
-                <v-text-field v-model="usernameOrEmail" id="usernameOrEmail" outlined dense solo flat hide-details class="custom-input">
+                <v-text-field 
+                  v-model="usernameOrEmail" 
+                  id="usernameOrEmail" 
+                  outlined 
+                  dense 
+                  solo 
+                  flat 
+                  class="custom-input" 
+                  :rules="[$rules.requiredRules, $rules.usernameRules]"
+                  required
+                >
                   <template v-slot:prepend-inner>
                     <div style="height: 40px;"></div>
                   </template>
@@ -20,9 +32,23 @@
               </v-col>
             </v-row>
             <v-row class="mt-2 mb-2">
+
               <v-col cols="12">
-                <v-btn @click="getNewPassword" class="custom-btn pa-6" color="primary">Get New Password</v-btn>
+          
+                <v-btn 
+          
+                  @click="getNewPassword" 
+          
+                  class="custom-btn pa-6" 
+          
+                  color="primary" 
+          
+                  :disabled="!isFormValid"
+          
+                >Get New Password</v-btn>
+          
               </v-col>
+          
             </v-row>
             <v-row>
               <v-col>
@@ -35,6 +61,7 @@
               </v-col>
             </v-row>
           </v-container>
+          </v-form>
         </v-card>
       </v-col>
     </v-row>
@@ -42,17 +69,21 @@
 </template>
 
 <script>
+
 export default {
+
   data() {
     return {
       usernameOrEmail: '',
+      isFormValid: false,
     };
-  }
+  },
+ 
+
 };
+
 </script>
-
 <style scoped>
-
 .no-scroll {
   overflow: hidden;
 }
