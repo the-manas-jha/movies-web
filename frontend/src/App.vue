@@ -19,14 +19,12 @@ export default {
     //
   }),
   computed: {
-    currentLayout() {
-      if (!this.$route.meta.layout) {
-        return DefaultLayout
-      }
-
+  currentLayout() {
+    if (this.$route.meta && this.$route.meta.layout) {
       return this.$route.meta.layout;
-      
     }
+    return DefaultLayout;
   }
+}
 };
 </script>

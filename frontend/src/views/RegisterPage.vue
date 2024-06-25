@@ -73,7 +73,7 @@
           </v-row>
           <v-row class="mt-1 align-center justify-center">
             <v-col cols="6">
-              <v-btn color="primary" class="pt-6 pb-6" block :disabled="!isFormValid">Sign Up</v-btn>
+              <v-btn color="primary" class="pt-6 pb-6" block :disabled="!isFormValid" @click="signUp">Sign Up</v-btn>
             </v-col>
           </v-row>
           <v-row class="mt-5">
@@ -116,6 +116,26 @@ export default {
     };
   },
   
+  methods: {
+  async signUp() {
+    const payload = {
+      username: this.username,
+      email: this.email,
+      password: this.password,
+      firstName: this.firstName,
+      lastName: this.lastName
+    };
+
+    try {
+      await this.$store.dispatch('auth/signUp', payload, this.$config);
+      console.log('Sign Up')
+
+      this.$router.push('/');
+    } catch (error) {
+      console.error('Sign Up Failed failed:', error);
+    }
+  }
+}
 };
 </script>
 

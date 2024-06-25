@@ -399,6 +399,43 @@ export interface ApiMovieMovie extends Schema.CollectionType {
   };
 }
 
+export interface ApiWidgetWidget extends Schema.CollectionType {
+  collectionName: 'widgets';
+  info: {
+    singularName: 'widget';
+    pluralName: 'widgets';
+    displayName: 'widget';
+    description: '';
+  };
+  options: {
+    draftAndPublish: true;
+  };
+  attributes: {
+    title: Attribute.String;
+    movies: Attribute.Relation<
+      'api::widget.widget',
+      'oneToMany',
+      'api::movie.movie'
+    >;
+    type: Attribute.String;
+    createdAt: Attribute.DateTime;
+    updatedAt: Attribute.DateTime;
+    publishedAt: Attribute.DateTime;
+    createdBy: Attribute.Relation<
+      'api::widget.widget',
+      'oneToOne',
+      'admin::user'
+    > &
+      Attribute.Private;
+    updatedBy: Attribute.Relation<
+      'api::widget.widget',
+      'oneToOne',
+      'admin::user'
+    > &
+      Attribute.Private;
+  };
+}
+
 export interface PluginUploadFile extends Schema.CollectionType {
   collectionName: 'files';
   info: {
@@ -761,6 +798,8 @@ export interface PluginUsersPermissionsUser extends Schema.CollectionType {
       'plugin::users-permissions.role'
     >;
     profile: Attribute.Media;
+    firstName: Attribute.String;
+    lastName: Attribute.String;
     createdAt: Attribute.DateTime;
     updatedAt: Attribute.DateTime;
     createdBy: Attribute.Relation<
@@ -836,6 +875,7 @@ declare module '@strapi/types' {
       'admin::transfer-token': AdminTransferToken;
       'admin::transfer-token-permission': AdminTransferTokenPermission;
       'api::movie.movie': ApiMovieMovie;
+      'api::widget.widget': ApiWidgetWidget;
       'plugin::upload.file': PluginUploadFile;
       'plugin::upload.folder': PluginUploadFolder;
       'plugin::content-releases.release': PluginContentReleasesRelease;

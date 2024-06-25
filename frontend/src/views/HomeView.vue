@@ -1,15 +1,31 @@
 <template>
-  <hello-world />
+  <div>
+    <h1>Home Page</h1>
+    <v-btn @click="handleLogout" color="primary">Logout</v-btn>
+  </div>
 </template>
 
 <script>
-  import HelloWorld from '../components/HelloWorld'
 
-  export default {
-    name: 'HomePage',
+export default {
+  name: 'HomePage',
 
-    components: {
-      HelloWorld,
+  methods: {
+    async handleLogout() {
+      try {
+        if (confirm('Do you want to log out?')) {
+          
+          this.clearAuthData();
+          this.$router.push('/login');
+        }
+      } catch (error) {
+        console.error('Logout failed:', error);
+      }
     },
-  }
+
+    clearAuthData() {
+      this.$store.commit('auth/clearAuthData');
+    },
+  },
+};
 </script>
